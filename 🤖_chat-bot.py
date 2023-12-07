@@ -94,6 +94,10 @@ temperature = st.sidebar.slider(label='Model temperature',min_value=0.0, max_val
 def query(prompt):
         
     openAI_prompt = bd_chat_lines_context + "\n" + prompt['inputs']['text'] + "\n"
+
+    client = OpenAI(
+        
+    )
     
     if option == chat_model:
         response = openai.ChatCompletion.create(
