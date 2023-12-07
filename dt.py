@@ -12,7 +12,7 @@ import pandas as pd
 
 client = OpenAI(
     # This is the default and can be omitted
-    api_key="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",
+    api_key=os.getenv('OPENAI_API_KEY')
 )
 
 st.set_page_config(page_title="B2b Sales Copilot", page_icon=":robot:",layout="wide")
